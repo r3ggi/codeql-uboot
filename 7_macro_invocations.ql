@@ -2,5 +2,5 @@ import cpp
 
 from MacroInvocation mi
 where
-mi.getParentInvocation().getMacroName() in ["ntohs", "ntohl", "ntohll"]
+mi.getMacro().getName().regexpMatch("ntoh(s|l|ll)")
 select mi, "found"
